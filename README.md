@@ -1,38 +1,81 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Open-Jira app
 
-## Getting Started
+Open Jira es una aplicación web desarrollada con Next.js que permite gestionar tareas y proyectos utilizando la metodología de seguimiento de problemas de Jira. La aplicación utiliza una base de datos MongoDB y se puede ejecutar fácilmente utilizando Docker Compose.
 
-First, run the development server:
+## Requisitos previos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Antes de ejecutar Open Jira, asegúrate de tener instalados los siguientes componentes:
+
+-   **[Docker](https://docs.docker.com/)**
+
+-   **[Docker Compose](https://docs.docker.com/compose/)**
+
+## Configuración
+
+Sigue los pasos a continuación para configurar y ejecutar Open Jira:
+
+1. **Clonar repositorio**: Clona este repositorio en tu máquina local:
+
+```powershell
+git clone https://github.com/rdani2005/open-jira.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Ingresa al repositorio**: Navega al directorio del proyecto:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```powershell
+cd open-jira
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. **Variables de Entorno**: Crea un archivo de variables de entorno .env basado en el archivo de ejemplo .env.example. Puedes hacerlo ejecutando el siguiente comando:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```powershell
+cp .env.example .env
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+4. **Actualizar Variables de Entorno**: Abre el archivo .env y actualiza las variables de entorno según tus preferencias. Asegúrate de proporcionar valores válidos para las variables requeridas.
 
-## Learn More
+5. **Ejecutar app**: Ejecuta el siguiente comando para construir las imágenes de Docker y levantar los contenedores:
 
-To learn more about Next.js, take a look at the following resources:
+```powershell
+docker-compose up -d
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. **Accede tranquilamente**: Una vez que los contenedores se hayan iniciado correctamente, podrás acceder a la aplicación Open Jira en tu navegador web en http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Uso
 
-## Deploy on Vercel
+Open Jira proporciona una interfaz intuitiva para gestionar tareas y proyectos. Puedes crear, editar y eliminar tareas, asignarlas a usuarios, establecer prioridades y mucho más. Explora las diferentes funcionalidades de la aplicación para aprovechar al máximo su potencial.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contribución
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Si deseas contribuir a Open Jira, sigue estos pasos:
+
+1. Haz un fork de este repositorio.
+2. Crea una rama para tu nueva función o correción de errores:
+
+```powershell
+git checkout -b nueva-funcion
+```
+
+3. Realiza los cambios necesarios y sus commits:
+
+```powershell
+git commit -am "Agregada nueva función"
+```
+
+4. Envía tus cambios al repositorio remoto:
+
+```powershell
+git push origin nueva-funcion
+```
+
+5. Abre una solicitud de extracción en GitHub y describe tus cambios en detalle.
+   Estaremos encantados de revisar tu contribución y fusionarla si cumple con los estándares de calidad del proyecto.
+
+## Problemas
+
+Si encuentras algún problema o tienes alguna pregunta sobre Open Jira, no dudes en abrir un [issue](https://github.com/rdani2005/open-jira/issues) en el repositorio de GitHub. Haremos todo lo posible para ayudarte.
+
+## Licencia
+
+Open Jira se distribuye bajo la licencia MIT. Consulta el archivo [LICENSE](https://github.com/rdani2005/open-jira/blob/main/LICENSE) para obtener más información.
